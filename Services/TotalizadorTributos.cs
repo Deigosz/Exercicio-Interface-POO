@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ExerInterface.Interface;
 
-namespace ExerInterface
+namespace ExerInterface.Services
 {
     public class TotalizadorTributos
     {
         public double Total { get; set; }
-        public void Adicionar(ITributavel t) 
+        public void Adicionar(ITributavel t)
         {
-            this.Total += t.CalcularTributos();
+            Total += t.CalcularTributos();
         }
     }
 }

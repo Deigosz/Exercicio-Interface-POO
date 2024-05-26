@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ExerInterface.Interface;
 
-namespace ExerInterface
+namespace ExerInterface.Services
 {
     public class ContaCorrente : ITributavel
     {
@@ -12,12 +13,12 @@ namespace ExerInterface
 
         public ContaCorrente(double saldo)
         {
-            this.Saldo = saldo;
+            Saldo = saldo;
         }
 
         public double CalcularTributos()
         {
-            return this.Saldo * 0.05;
+            return Saldo * 0.05;
         }
     }
 }
